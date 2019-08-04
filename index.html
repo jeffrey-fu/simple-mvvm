@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>A Simple MVVM</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ title }}</h1>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          title: 'hello world!'
+        }
+      });
+      setTimeout(() => {
+        vm.title = "hello jeff!";
+      }, 3000);
+    </script>
+  </body>
+</html>
